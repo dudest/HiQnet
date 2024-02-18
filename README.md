@@ -1,6 +1,41 @@
 # HiQnet
- Parsing library for HiQnet communication protocol
+Parsing library for HiQnet communication protocol
 
+## Installation
+
+```
+npm install hiqnet
+```
+
+## Usage
+
+
+
+## Resources
+
+- [Soundweb London DI Kit](https://bssaudio.com/en/site_elements/soundweb-london-di-kit)
+- [Soundweb London 3rd Party Control](https://help.harmanpro.com/Documents/135/Soundweb%20London%203rd%20Party%20Control.pdf)
+
+### Address Property
+
+The address property is a buffer of exactly 8 bytes. it is comprised of:
+
+- Node Address (2 bytes)
+- Virtual Device (1 byte)
+- Object ID (3 bytes)
+- Parameter ID (2 bytes)
+
+The following bytes have special meanings. The node suite will automatically handle replacement when commands are encapsulated and decapsulated. Be mindfull on nodes requiring an address property that the **non replaced** character is needed in decimal format. 
+
+| TYPE   | HEX  | HEX replacement | DEC  | DEC replacement |
+| ------ |:----:| :-------------: | :---:| :-------------: |
+| STX    | 0x02 | 0x1B, 0x82      | 2    | 27, 130         |
+| ETX    | 0x03 | 0x1B, 0x83      | 3    | 27, 131         |
+| ACK    | 0x06 | 0x1B, 0x86      | 6    | 27, 134         |
+| NAK    | 0x15 | 0x1B, 0x95      | 21   | 27, 149         |
+| Escape | 0x1B | 0x1B, 0x9B      | 27   | 27, 155         |
+
+---
 
 ## Testing
 
@@ -50,3 +85,7 @@
 
   20 passing (7ms)
 ```
+
+## Feature Requests / Bug Reporting
+
+Please report any bugs or issues to the repository [here](https://github.com/dudest/HiQnet/issues).
