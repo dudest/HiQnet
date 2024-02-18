@@ -1,3 +1,11 @@
+[![platform](https://img.shields.io/badge/platform-node.js-green)](https://nodejs.org/en)
+[![npm package version](https://img.shields.io/npm/v/HiQnet)](https://www.npmjs.com/package/HiQnet)
+![license](https://img.shields.io/npm/l/HiQnet)
+[![Npm package weekly downloads](https://badgen.net/npm/dw/HiQnet)](https://www.npmjs.com/package/HiQnet)
+[![Npm package monthly downloads](https://badgen.net/npm/dm/HiQnet)](https://www.npmjs.com/package/HiQnet)
+[![Npm package total downloads](https://badgen.net/npm/dt/HiQnet)](https://www.npmjs.com/package/HiQnet)
+[![github-issues](https://img.shields.io/github/issues/dudest/HiQnet)](https://github.com/dudest/HiQnet/issues)
+
 # HiQnet
 Parsing library for HiQnet communication protocol
 
@@ -7,9 +15,64 @@ Parsing library for HiQnet communication protocol
 npm install hiqnet
 ```
 
+## Version History
+
+| Version | Release Notes        |
+| :-----: | -------------------- |
+| 0.0.1   | Initial beta release |
+
 ## Usage
 
+### Sending Commands
 
+Before sending a command to a Blu device, use `hiqnet.encapsulatCommand(buf: Buffer)`. This function will byte substitute, add checksum, and prepend/append STX/ETX respectively.
+
+```
+const hiqnet = require('hiqnet');
+
+let cmd_id = Buffer.from([0x88]);
+let address = Buffer.from([0x00, 0x09, 0x03, 0x00, 0x01, 0x00, 0x4e, 0x20]);
+let data = hiqnet.encDiscrete(10);
+
+let cmd = hiqnet.encapsulateCommand(Buffer.concat([cmd_id, address, data]));
+
+// send encapsulated command to Blu device via TCP or Serial.
+```
+
+There are several functions to facilitate encoding data types:
+
+- `encDiscrete(v: number)`
+- `encPercent(v: number)`
+- `encGain(v: number)`
+- `encScalerLinear(v: number)`
+- `encDelay(v: number)`
+- `encFrequencyOrSpeed(v: number)`
+
+### Parsing Responses
+
+To parse incomming messages, use `hiqnet.decapsulateCommand(buf: Buffer)`. This function will strip STX/ETX, verify and remove checksum, and byte unsubstitute.
+
+```
+const hiqnet = require('hiqnet');
+
+let cmd = hiqnet.decapsulateCommand(rx$);
+
+let cmd_id = hiqnet.getCommandIdBuffer(cmd);
+let address = hiqnet.getAddressBuffer(cmd);
+let data = hiqnet.getDateBuffer(cmd);
+
+// decode data buffer
+let dataValue = hiqnet.decDiscrete(data);
+```
+
+There are several functions to facilitate decoding data types:
+
+- `decDiscrete(b: Buffer)`
+- `decPercent(b: Buffer)`
+- `decGain(b: Buffer)`
+- `decScalerLinear(b: Buffer)`
+- `decDelay(b: Buffer)`
+- `decFrequencyOrSpeed(b: Buffer)`
 
 ## Resources
 
