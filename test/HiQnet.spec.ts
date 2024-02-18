@@ -2,7 +2,7 @@ const assert = require('assert');
 const bssLib = require('../dist/HiQnet');
 
 
-describe('bss_lib.js', function () {
+describe('HiQnet.ts', function () {
     describe('checkSum', function () {
         it('<buffer 01 02 03 04 05 06> should return <buffer 07>', function () {
             var actual = bssLib.calculateChecksum(Buffer.from([0x01, 0x02, 0x03, 0x04, 0x05, 0x06]));
