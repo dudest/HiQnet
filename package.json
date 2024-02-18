@@ -5,7 +5,8 @@
   "main": "./src/HiQnet.ts",
   "scripts": {
     "start": "tsc --watch",
-    "test": "mocha"
+    "build": "tsc",
+    "test": "mocha 'test/**/*.ts'"
   },
   "keywords": ["HiQnet", "BSS", "Harman", "DSP"],
   "author": "Alexandre Matheson",
