@@ -1,10 +1,10 @@
 [![platform](https://img.shields.io/badge/platform-node.js-green)](https://nodejs.org/en)
-[![npm package version](https://img.shields.io/npm/v/HiQnet)](https://www.npmjs.com/package/HiQnet)
-![license](https://img.shields.io/npm/l/HiQnet)
-[![Npm package weekly downloads](https://badgen.net/npm/dw/HiQnet)](https://www.npmjs.com/package/HiQnet)
-[![Npm package monthly downloads](https://badgen.net/npm/dm/HiQnet)](https://www.npmjs.com/package/HiQnet)
-[![Npm package total downloads](https://badgen.net/npm/dt/HiQnet)](https://www.npmjs.com/package/HiQnet)
-[![github-issues](https://img.shields.io/github/issues/dudest/HiQnet)](https://github.com/dudest/HiQnet/issues)
+[![npm package version](https://img.shields.io/npm/v/hiqnet)](https://www.npmjs.com/package/hiqnet)
+![license](https://img.shields.io/npm/l/hiqnet)
+[![Npm package weekly downloads](https://badgen.net/npm/dw/hiqnet)](https://www.npmjs.com/package/hiqnet)
+[![Npm package monthly downloads](https://badgen.net/npm/dm/hiqnet)](https://www.npmjs.com/package/hiqnet)
+[![Npm package total downloads](https://badgen.net/npm/dt/hiqnet)](https://www.npmjs.com/package/hiqnet)
+[![github-issues](https://img.shields.io/github/issues/dudest/hiqnet)](https://github.com/dudest/hiqnet/issues)
 
 # HiQnet
 Parsing library for HiQnet communication protocol
