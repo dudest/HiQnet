@@ -44,7 +44,7 @@ There are several functions to facilitate encoding data types:
 - `encDiscrete(v: number)`
 - `encPercent(v: number)`
 - `encGain(v: number)`
-- `encScalerLinear(v: number)`
+- `encScalarLinear(v: number)`
 - `encDelay(v: number)`
 - `encFrequencyOrSpeed(v: number)`
 
@@ -70,7 +70,7 @@ There are several functions to facilitate decoding data types:
 - `decDiscrete(b: Buffer)`
 - `decPercent(b: Buffer)`
 - `decGain(b: Buffer)`
-- `decScalerLinear(b: Buffer)`
+- `decScalarLinear(b: Buffer)`
 - `decDelay(b: Buffer)`
 - `decFrequencyOrSpeed(b: Buffer)`
 
