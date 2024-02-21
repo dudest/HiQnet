@@ -1,8 +1,9 @@
 {
   "name": "hiqnet",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parsing library for HiQnet communication protocol",
-  "main": "./src/HiQnet.ts",
+  "main": "./dist/HiQnet.js",
+  "types": "./dist/HiQnet.d.ts",
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
