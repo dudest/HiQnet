@@ -1,8 +1,6 @@
 [![platform](https://img.shields.io/badge/platform-node.js-green)](https://nodejs.org/en)
 [![npm package version](https://img.shields.io/npm/v/hiqnet)](https://www.npmjs.com/package/hiqnet)
 ![license](https://img.shields.io/npm/l/hiqnet)
-[![Npm package weekly downloads](https://badgen.net/npm/dw/hiqnet)](https://www.npmjs.com/package/hiqnet)
-[![Npm package monthly downloads](https://badgen.net/npm/dm/hiqnet)](https://www.npmjs.com/package/hiqnet)
 [![Npm package total downloads](https://badgen.net/npm/dt/hiqnet)](https://www.npmjs.com/package/hiqnet)
 [![github-issues](https://img.shields.io/github/issues/dudest/hiqnet)](https://github.com/dudest/hiqnet/issues)
 
