@@ -17,9 +17,12 @@ npm install hiqnet
 
 ## Version History
 
-| Version | Release Notes        |
-| :-----: | -------------------- |
-| 0.0.1   | Initial beta release |
+| Version | Release Notes                     |
+| :-----: | --------------------------------- |
+| 0.0.4   | Package publishing automation     |
+| 0.0.3   | Fixed missing .js and .d.ts files |
+| 0.0.2   | Fixed broken links in readme      |
+| 0.0.1   | Initial beta release              |
 
 ## Usage
 
@@ -41,11 +44,11 @@ let cmd = hiqnet.encapsulateCommand(Buffer.concat([cmd_id, address, data]));
 
 There are several functions to facilitate encoding data types:
 
-- `encDiscrete(v: number)`
-- `encPercent(v: number)`
-- `encGain(v: number)`
-- `encScalarLinear(v: number)`
-- `encDelay(v: number)`
+- `encDiscrete(v: number): Buffer`
+- `encPercent(v: number): Buffer`
+- `encGain(v: number): Buffer`
+- `encScalarLinear(v: number): Buffer`
+- `encDelay(v: number): Buffer`
 - `encFrequencyOrSpeed(v: number)`
 
 ### Parsing Responses
@@ -67,12 +70,12 @@ let dataValue = hiqnet.decDiscrete(data);
 
 There are several functions to facilitate decoding data types:
 
-- `decDiscrete(b: Buffer)`
-- `decPercent(b: Buffer)`
-- `decGain(b: Buffer)`
-- `decScalarLinear(b: Buffer)`
-- `decDelay(b: Buffer)`
-- `decFrequencyOrSpeed(b: Buffer)`
+- `decDiscrete(b: Buffer): number`
+- `decPercent(b: Buffer): number`
+- `decGain(b: Buffer): number`
+- `decScalarLinear(b: Buffer): number`
+- `decDelay(b: Buffer): number`
+- `decFrequencyOrSpeed(b: Buffer): number`
 
 ## Resources
 
