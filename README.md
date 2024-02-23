@@ -15,12 +15,13 @@ npm install hiqnet
 
 ## Version History
 
-| Version | Release Notes                     |
-| :-----: | --------------------------------- |
-| 0.0.4   | Package publishing automation     |
-| 0.0.3   | Fixed missing .js and .d.ts files |
-| 0.0.2   | Fixed broken links in readme      |
-| 0.0.1   | Initial beta release              |
+| Version | Release Notes                                      |
+| :-----: | -------------------------------------------------- |
+| 0.0.5   | Fixed: github actions not publishing .js and .d.ts |
+| 0.0.4   | Package publishing automation                      |
+| 0.0.3   | Fixed missing .js and .d.ts files                  |
+| 0.0.2   | Fixed broken links in readme                       |
+| 0.0.1   | Initial beta release                               |
 
 ## Usage
 
