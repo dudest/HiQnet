@@ -1,6 +1,6 @@
 {
   "name": "hiqnet",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Parsing library for HiQnet communication protocol",
   "main": "./lib/HiQnet.js",
   "types": "./lib/HiQnet.d.ts",
